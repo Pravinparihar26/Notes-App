@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 242, 242);
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.form-style {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-style h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(73, 73, 73);
+}
+
+.form-style input {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 5px;
+}
+
+.form-style input:focus {
+    outline: 1px solid rgb(144, 144, 144);
+}
+
+.form-style button {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+.form-style button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+form a {
+    color: rgb(0, 123, 255);
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+#user-notes {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+}
+
+#header-bar {
+    position: relative;
+    padding: 2rem;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#user-notes #buttons button {
+    background-color: rgb(115, 227, 255);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#user-profile {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+}
+
+#session-name {
+    background-color: rgb(77, 77, 77);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 50%;
+}
+
+#logout-button {
+    display: none;
+}
+
+#user-profile:hover #logout-button {
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#user-profile button {
+    background-color: rgb(254, 0, 0);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.input-field input,
+.input-field textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 5px;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    outline: 1px solid rgb(144, 144, 144);
+}
+
+.input-field button {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    min-width: fit-content;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+.input-field button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+#all-notes {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.note-table {
+    width: 80%;
+    min-width: auto;
+    min-width: 30rem;
+    border-collapse: collapse;
+    margin: 1rem auto;
+}
+
+.note-table th,
+.note-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.note-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.note-table tr:nth-child(even) {
+    background-color: #fafafa;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Note Creator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <form id="login-form" class="form-style" onsubmit="login(event)">
+        <h2>LOGIN FORM</h2>
+        <input type="text" id="login-username" placeholder="Enter Username" required>
+        <input type="password" id="login-password" placeholder="Enter Password" required>
+        <button type="submit">Submit</button>
+        <p>
+            Don't have an account?
+            <a href="#" onclick="event.preventDefault(); showform('register-form')">Register Now</a>
+        </p>
+        <p id="login-error-message" class="error-message"></p>
+    </form>
+
+    <form id="register-form" class="hidden form-style" onsubmit="register(event)">
+        <h2>REGISTER FORM</h2>
+        <input type="text" id="register-username" placeholder="Enter Username" required>
+        <input type="password" id="register-password" placeholder="Enter Password" required>
+        <button type="submit">Submit</button>
+        <p>
+            Already have an account?
+            <a href="#" onclick="event.preventDefault(); showform('login-form')">Login Now</a>
+        </p>
+        <p id="register-error-message" class="error-message"></p>
+    </form>
+
+    <div id="user-notes" class="hidden">
+        <div id="header-bar">
+            <div id="buttons">
+                <button type="button" onclick="showfield('add-note-form')">add</button>
+                <button type="button" onclick="display()">display</button>
+                <button type="button" onclick="showfield('delete-note-form')">delete</button>
+                <button type="button" onclick="showfield('update-note-form')">update</button>
+                <button type="button" onclick="showfield('search-note-form')">search</button>
+            </div>
+
+            <div id="user-profile">
+                <p id="session-name"></p>
+                <button id="logout-button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div id="input-form">
+            <div id="add-note-form" class="input-field">
+                <input type="text" id="title" name="title" placeholder="Enter title">
+                <textarea id="content" name="content" rows="4" cols="50" placeholder="Enter content"></textarea>
+                <button type="button" onclick="add()">Add Note</button>
+            </div>
+            <div id="delete-note-form" class="input-field">
+                <input type="number" id="delete-id" name="id" placeholder="Enter Note ID">
+                <button type="button" onclick="deleteNote()">Delete Note</button>
+            </div>
+            <div id="update-note-form" class="input-field">
+                <input type="number" id="update-id" name="id" placeholder="Enter Note ID to update">
+                <input type="text" id="new-title" name="title" placeholder="Enter new title">
+                <textarea id="new-content" name="content" rows="4" cols="50" placeholder="Enter new content"></textarea>
+                <button type="button" onclick="update()">Update Note</button>
+            </div>
+            <div id="search-note-form" class="input-field">
+                <input type="text" id="key" name="key" placeholder="Enter key to search">
+                <button type="button" onclick="search()">Search Note</button>
+            </div>
+        </div>
+
+        <div id="all-notes"></div>
+    </div>
+</body>
+
+</html>
